@@ -24,18 +24,13 @@ int main() {
                 A[p]++;
             }
         }
-        int count=0;
-        for(i=1;i<N;i++)
+        int count=0;  // conting the number of minimum changes
+        for(i=1;i<=N;i++)
         {
-            if(A[i]==0 && N1>1)
+            if(A[i]==0)
             {
                 count++;
                 N1--;
-            }
-            else if(A[i]>1 && N1>1)
-            {
-                count=count+(A[i]-1);
-                N1=N1-(A[i]-1);
             }
         }
         cout<<count<<endl;
